@@ -10,15 +10,4 @@
  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  */
 
-use lithium\net\http\Router;
-
-$persist = ['persist' => ['admin', 'controller']];
-
-Router::connect('/admin/ecommerce/watchers/{:id:[0-9]+}', [
-	'controller' => 'Watche:rs', 'library' => 'ecommerce_rent', 'action' => 'view', 'admin' => true
-], $persist);
-Router::connect('/admin/ecommerce/watchers/{:action}', [
-	'controller' => 'Watchers', 'library' => 'ecommerce_rent', 'admin' => true
-], $persist);
-
 ?>
