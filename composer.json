@@ -1,0 +1,25 @@
+{
+    "name": "atelierdisko/ecommerce_rent",
+    "description": "Rental functionality for Boutique.",
+    "homepage": "http://atelierdisko.de",
+    "type": "lithium-library",
+    "license": "proprietary",
+    "authors": {
+      "name": "Atelier Disko",
+      "homepage": "http://atelierdisko.de"
+    },
+    "require": {
+        "php": ">=5.5.0",
+        "jschaedl/iban": "1.1.*",
+        "uor/li3_flash_message": "dev-master",
+        "atelierdisko/base_core": "1.2.*",
+        "atelierdisko/ecommerce_core": "1.2.*",
+        "unionofrad/lithium": "dev-dev",
+        "composer/installers": "~1.0"
+    },
+    "repositories": [
+      { "type": "vcs", "url": "https://github.com/uor/li3_flash_message" },
+      { "type": "vcs", "url": "git@bitbucket.org:atelierdisko/base_core.git" },
+      { "type": "vcs", "url": "git@bitbucket.org:atelierdisko/ecommerce_core.git" }
+   ]
+}
