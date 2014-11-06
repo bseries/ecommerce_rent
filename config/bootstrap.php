@@ -18,9 +18,13 @@ require 'settings.php';
 use base_core\models\Users;
 use li3_mailer\action\Mailer;
 use base_core\extensions\cms\Settings;
+use lithium\g11n\Message;
+
+extract(Message::aliases());
+
 
 // Send mail once the user is able to rent again.
-Users::applyFilter('save', function($self, $params, $chain) {
+Users::applyFilter('save', function($self, $params, $chain) use ($t) {
 	$entity = $params['entity'];
 
 	if (!Settings::read('user.sendCanRentMail')) {
@@ -30,10 +34,10 @@ Users::applyFilter('save', function($self, $params, $chain) {
 	if (!$entity->exists()) {
 		return $chain->next($self, $params, $chain);
 	}
-	if (!$entity->can_rent) {
+	if (empty($params['data']['can_rent'])) {
 		return $chain->next($self, $params, $chain);
 	}
-	if ($result = $chain->next($self, $params, $chain)) {
+	if (!$result = $chain->next($self, $params, $chain)) {
 		return $result;
 	}
 
