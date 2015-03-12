@@ -10,11 +10,6 @@
  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  */
 
-// require 'panes.php';
-require 'settings.php';
-// require 'media.php';
-// require 'widgets.php';
-
 use base_core\models\Users;
 use li3_mailer\action\Mailer;
 use base_core\extensions\cms\Settings;
@@ -44,7 +39,10 @@ Users::applyFilter('save', function($self, $params, $chain) use ($t) {
 	return Mailer::deliver('user_can_rent', [
 		'library' => 'ecommerce_rent',
 		'to' => $entity->email,
-		'subject' => $t('You can now rent again.'),
+		'subject' => $t('You can now rent again.', [
+			'locale' => $entity->locale,
+			'scope' => 'ecommerce_rent'
+		]),
 		'data' => [
 			'user' => $entity
 		]

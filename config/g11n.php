@@ -10,4 +10,13 @@
  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  */
 
+use lithium\g11n\Catalog;
+
+Catalog::config([
+	basename(dirname(__DIR__)) => [
+		'adapter' => 'Gettext',
+		'path' => dirname(__DIR__) . '/resources/g11n/po'
+	 ]
+] + Catalog::config());
+
 ?>
