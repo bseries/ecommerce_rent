@@ -22,7 +22,6 @@ use lithium\g11n\Message;
 
 extract(Message::aliases());
 
-
 // Send mail once the user is able to rent again.
 Users::applyFilter('save', function($self, $params, $chain) use ($t) {
 	$entity = $params['entity'];
