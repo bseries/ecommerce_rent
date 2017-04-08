@@ -1,13 +1,13 @@
 {
     "name": "atelierdisko/ecommerce_rent",
     "description": "Rental functionality for Boutique.",
-    "homepage": "http://atelierdisko.de",
+    "homepage": "https://atelierdisko.de",
     "type": "lithium-library",
     "license": "proprietary",
     "authors": [
         {
           "name": "Atelier Disko",
-          "homepage": "http://atelierdisko.de"
+          "homepage": "https://atelierdisko.de"
         }
     ],
     "require": {
