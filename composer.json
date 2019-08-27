@@ -4,7 +4,7 @@
     "type": "lithium-library",
     "license": "proprietary",
     "require": {
-        "atelierdisko/li3_mailer": "^1.1",
+        "atelierdisko/li3_mailer": "^1.3",
         "bseries/base_core": "^1.5",
         "bseries/ecommerce_core": "^1.5",
         "composer/installers": "^1",
