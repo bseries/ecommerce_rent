@@ -2,7 +2,7 @@
     "name": "bseries/ecommerce_rent",
     "description": "Rental functionality for Boutique.",
     "type": "lithium-library",
-    "license": "proprietary",
+    "license": ["BSD-3-Clause"],
     "require": {
         "atelierdisko/li3_mailer": "^1.3",
         "bseries/base_core": "^1.5",

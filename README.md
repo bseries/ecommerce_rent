@@ -1,2 +1,2 @@
-# B-Series Module
+# eCommerce Rent B-Series Module
 ## Rental functionality for Boutique.
